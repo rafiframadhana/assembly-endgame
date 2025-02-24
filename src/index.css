@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  background-color: #262626;
+  color: #D9D9D9;
+  padding: 20px;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+}
+
+header>h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #F9F4DA;
+}
+
+header>p {
+  font-size: 0.875rem;
+  max-width: 350px;
+  color: #8E8E8E;
+}
+
+section.game-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #F9F4DA;
+  width: 100%;
+  max-width: 350px;
+  min-height: 60px;
+  border-radius: 4px;
+  margin-block: 30px;
+}
+
+section.game-status.won {
+  background-color: #10A95B;
+}
+
+section.game-status.lost {
+  background-color: #ba2a2a;
+}
+
+section.game-status.farewell {
+  background-color: rgba(122, 94, 167, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.game-status>p {
+  margin: 5px;
+}
+
+section.game-status > p.farewell-message {
+  font-style: italic;
+  font-weight: 400;
+}
+
+section.game-status>h2 {
+  font-size: 1.25rem;
+  margin: 5px
+}
+
+section.language-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  max-width: 350px;
+  margin-bottom: 36px;
+}
+
+span.chip {
+  border-radius: 3px;
+  padding: 4.5px;
+  position: relative;
+}
+
+span.chip.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+section.word {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+section.word>span {
+  height: 40px;
+  width: 40px;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+  border-bottom: 1px solid #F9F4DA;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(249, 244, 218, 1);
+
+}
+
+section.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  max-width: 450px;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+section.keyboard>button {
+  width: 40px;
+  height: 40px;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 4px;
+  border-width: 1px;
+  background: rgba(252, 186, 41, 1);
+  border: 1px solid rgba(215, 215, 215, 1);
+  font-family: Hanken Grotesk;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+section.keyboard>button:hover {
+  opacity: 0.8;
+}
+
+section.keyboard > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5
+} 
+
+section.keyboard>button.correct {
+  background-color: #10A95B;
+}
+
+section.keyboard>button.wrong {
+  background-color: #EC5D49;
+}
+
+button.new-game {
+  background-color: #11B5E5;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
+  width: 225px;
+  height: 40px;
+  padding: 6px 12px;
+  display: block;
+  margin-inline: auto;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+button.new-game:hover {
+  opacity: 0.7;
+}
